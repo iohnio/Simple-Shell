@@ -1,6 +1,6 @@
 # Simple-Shell
 ## Project Description
-SimpleShell is a custom Linux command-line interpreter written in C that operates through a continuous while control loop 
+Simple-Shell is a custom Linux command-line interpreter written in C that operates through a continuous while control loop 
 designed to manage input tokenization and process execution. The shell utilizes a prioritized if-else if-else logic chain 
 to distinguish between builtins and system commands. It first intercepts built-in commands like 'exit' to gracefully 
 terminate the shell, 'history' to display the last 10 commands entered during a session, and 'procread' to view information 
