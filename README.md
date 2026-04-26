@@ -1,9 +1,4 @@
-## Student Information
-- Name: John Jo
-- Email: sunghyj1@umbc.edu
-- Student ID: XA75336
-- Class Section: 2
-
+# Simple-Shell
 ## Project Description
 SimpleShell is a custom Linux command-line interpreter written in C that operates through a continuous while control loop 
 designed to manage input tokenization and process execution. The shell utilizes a prioritized if-else if-else logic chain 
@@ -15,9 +10,8 @@ parsing that correctly handles complex input, including quoted strings and escap
 
 ## How to Compile
 1. open terminal
-2. navigate to project directory 'cd project1-sp26-iohnio'
-3. run 'make clean' to make sure no old object files are present
-4. run 'make build' to compile shell.c and utils.c
+2. run 'make clean' to make sure no old object files are present
+3. run 'make build' to compile shell.c and utils.c
 
 ## How to Run the Project
 ./shell
@@ -26,18 +20,37 @@ parsing that correctly handles complex input, including quoted strings and escap
 1. When entering a very long text to test buffer size, Valgrind reports a "Syscall param execve(filename) points to uninitialised btye(s)" 
    warning despite a perfect heap summary (0 bytes lost).
 
-## LLM/AI Prompts Used
-1. Is a command line simply a text input for commands and the shell the director that tells the kernel what to do?
-2. Summarize the project requirements
-3. What is size_t?
-4. Why am I getting this error? utils.c:62:31: error: unused variable ‘i’ [-Werror=unused-variable]
-5. Give me an example of using fork() and wait()
-6. Why isn't .421history in the file structure?
-7. How do I free memory in C?
+## Example Usage
+```bash
+> echo "test"
+test
 
-## Sources Used
-1. google gemini - used to ask questions on meeting project requirements and debugging 
-2. https://docs.kernel.org/filesystems/proc.html - used to understand the proc filesystem
-3. https://pubs.opengroup.org/onlinepubs/9699919799/functions/contents.html - used to understand and implement standard library functions
-   and system calls like fgetc, malloc, fork, and exec family
+> echo "meow meow"
+meow meow
 
+> echo "CMSC 421 is awesome!"
+CMSC 421 is awesome!
+
+> history
+echo "test"
+echo "meow meow"
+echo "CMSC 421 is awesome!"
+
+> history
+echo "test"
+echo "meow meow"
+echo "CMSC 421 is awesome!"
+history
+
+> procread partitions
+major minor  #blocks  name
+
+   8        0  976762584 sda
+   8        1    4194304 sda1
+   8        2    8388608 sda2
+   8        3  964177920 sda3
+   8       16  976762584 sdb
+   8       17  976760832 sdb1
+
+>
+```
